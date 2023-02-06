@@ -44,7 +44,7 @@ body {
     margin-right: 300px;
     margin-top: -15px;
   }
-  .featured {
+  .featured, .menu{
     background-color: #ebebeb;  
     padding: 0px 20px 0px;
   }
@@ -140,16 +140,37 @@ body {
   .row > .column:first-child{
     padding: 10px 14px 10px 0px;
   }
+  .menurow > .menucolumn {
+    padding: 10px 14px;
+  }
+
+  .menurow > .menucolumn:last-child{
+    padding: 10px 0px 10px 14px;
+  }
+  .menurow > .menucolumn:first-child{
+    padding: 10px 14px 10px 0px;
+  }
   
   
-  /* Create four equal columns that floats next to each other */
+  /* Create three equal columns that floats next to each other */
   .column {
     float: left;
     width: 29%;
   }
+/* Create two equal columns that floats next to each other */
+  
+  .menucolumn {
+    float: left;
+    width: 46%;
+  }
   
   /* Clear floats after rows */ 
   .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  .menurow:after {
     content: "";
     display: table;
     clear: both;
@@ -171,10 +192,25 @@ body {
     margin: 1px;
    }
 
+
+   .menuheader {
+    background-color: #2e2d47;
+    text-align: center;
+   }
+
+   .menuheader > h2 {
+    color: #ebebeb;
+   }
+
+
+
    /* Responsive layout - makes a two column-layout instead of four columns */
 @media screen and (max-width: 600px) {
     .column {
       width: 25%;
+    }
+    .menucolumn{
+        width: 50%;
     }
   }
   
@@ -183,4 +219,8 @@ body {
     .column {
       width: 100%;
     }
+    .menucolumn {
+        width: 100%;
+    }
+
   }
