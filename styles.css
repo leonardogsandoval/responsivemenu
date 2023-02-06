@@ -1,30 +1,66 @@
 body {
-    background-image: url(https://cdn.freecodecamp.org/curriculum/css-cafe/beans.jpg);
+    /*background-image: url(https://cdn.freecodecamp.org/curriculum/css-cafe/beans.jpg);*/  
+    background-color: black;
     font-family: sans-serif;
     padding: 20px;
   }
-  
+  .banner {
+    background-image: url("Images/banner3.jpg");
+    background-color: #ebebeb;
+    margin: -20px;
+    background-size: cover;
+    padding: 70px 40px 105px ;
+  }
   h1 {
-    font-size: 40px;
+    font-size: 50px;
     margin-top: 0;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
+    font-family: Montserrat,sans-serif;
+    color: #e8b484;
+    text-align: left;
   }
-  
-  h2 {
-    font-size: 30px;
-  }
-  
   .established {
-    font-style: italic;
+    font-family: Montserrat,sans-serif;
+    color: #e8b484;
+    font-size: 20px;
+    text-align: left;
+    margin-top: -15px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
   }
-  
-  h1, h2, p {
-    text-align: center;
+  .contact {
+    font-family: Montserrat,sans-serif;
+    font-weight: 400;
+    color: white;
+    font-size: 12px;
+    text-align: left;
+    margin-bottom: 1px;
+    margin-top: 1px;
+  }
+  hr {
+    height: 2px;
+    background-color: #e8b484;
+    border-color: #e8b484;
+    margin-right: 300px;
+    margin-top: -15px;
+  }
+  .featured {
+    background-color: #ebebeb;  
+    padding: 0px 20px 0px;
+  }
+  h2 {
+    font-size: 20px;
+    font-weight: 700;
+    font-family: Montserrat,sans-serif;
+    color: #2e2d47;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+
   }
   
   .menu {
     width: 80%;
-    background-color: burlywood;
+    background-color: #ebebeb;
     margin-left: auto;
     margin-right: auto;
     padding: 20px;
@@ -37,11 +73,7 @@ body {
     margin-right: auto;
   }
   
-  hr {
-    height: 2px;
-    background-color: brown;
-    border-color: brown;
-  }
+
   
   .bottom-line {
     margin-top: 25px;
@@ -92,4 +124,63 @@ body {
   
   a:active {
     color: brown;
+  }
+
+
+  
+  /* Add padding BETWEEN each column (if you want) */
+  
+  .row > .column {
+    padding: 10px 14px;
+  }
+
+  .row > .column:last-child{
+    padding: 10px 0px 10px 14px;
+  }
+  .row > .column:first-child{
+    padding: 10px 14px 10px 0px;
+  }
+  
+  
+  /* Create four equal columns that floats next to each other */
+  .column {
+    float: left;
+    width: 29%;
+  }
+  
+  /* Clear floats after rows */ 
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  /* Content */
+.content {
+    background-color: white;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    font-family: Montserrat,sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 10px;
+    padding-bottom: 2px
+  }
+   .content > h3 , .content > p {
+    margin: 1px;
+   }
+
+   /* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 600px) {
+    .column {
+      width: 25%;
+    }
+  }
+  
+  /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 300px) {
+    .column {
+      width: 100%;
+    }
   }
